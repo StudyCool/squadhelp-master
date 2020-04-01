@@ -6,10 +6,7 @@ import {connect} from 'react-redux';
 import {clearErrorSignUpAndLogin} from '../../actions/actionCreator';
 import CONSTANTS from '../../constants';
 
-const LoginPage = (props) => {
-    const changeRoute = () => {
-        props.history.replace('/');
-    };
+const LoginPage = () => {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.loginContainer}>
@@ -20,14 +17,13 @@ const LoginPage = (props) => {
                     </div>
                 </div>
                 <div className={styles.loginFormContainer}>
-                    <LoginForm changeRoute={changeRoute}/>
+                    <LoginForm/>
                 </div>
             </div>
         </div>
     )
 
 };
-
 
 const mapDispatchToProps = (dispatch) => {
     return {
