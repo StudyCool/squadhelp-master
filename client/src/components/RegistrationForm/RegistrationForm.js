@@ -31,7 +31,6 @@ class RegistrationForm extends React.Component {
         });
     };
 
-
     render() {
         const {handleSubmit, submitting, auth, authClear} = this.props;
         const {error} = auth;
@@ -39,12 +38,7 @@ class RegistrationForm extends React.Component {
             <div className={styles.signUpFormContainer}>
                 {error && <Error data={error.data} status={error.status} clearError={authClear}/>}
                 <div className={styles.headerFormContainer}>
-                    <h2>
-                        CREATE AN ACCOUNT
-                    </h2>
-                    <h4>
-                        We always keep your name and email address private.
-                    </h4>
+
                 </div>
                 <form onSubmit={handleSubmit(this.clicked)}>
                     <div className={styles.row}>
@@ -157,6 +151,7 @@ class RegistrationForm extends React.Component {
                     </button>
                 </form>
             </div>
+
         )
     }
 }

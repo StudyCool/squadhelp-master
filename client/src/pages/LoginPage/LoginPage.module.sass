@@ -1,31 +1,36 @@
 .mainContainer
+  box-sizing: border-box
   background-color: #3ea9f5
-  display: flex
-  justify-content: center
-  align-items: flex-start
-  padding-top: 40px
+  display: block
+  padding: 0px 49px 0 45px
+
   height: 100vh
 
   .loginContainer
     background-color: #3ea9f5
     min-width: 300px
     width: 1200px
-    display: flex
-    flex-direction: column
+
+    margin: 0 auto
+    padding-top: 50px
 
     .loginFormContainer
-      display: flex
-      align-items: center
-      justify-content: center
-      margin-top: 80px
 
+      margin-top: 80px
+      h2
+        text-align: center
+        font-size: 34px
+        letter-spacing: 0.6px
+        color: white
+        margin-top: 20px
+        margin-bottom: 28px
 
     .headerSignUpPage
       display: flex
       flex-direction: row
       justify-content: space-between
       align-items: center
-      margin-top: 26px
+
       padding-left: 45px
       padding-right: 100px
       @media (max-width: 530px)
