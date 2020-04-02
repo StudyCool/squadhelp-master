@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const FormInput = (props) => {  const { label, input, type, classes, meta: { touched, error } } = props;
 
@@ -26,5 +27,13 @@ const FormInput = (props) => {  const { label, input, type, classes, meta: { tou
         </div>
     );
 };
+
+FormInput.propTypes = {
+        label: PropTypes.string,
+        type: PropTypes.string,
+        className: PropTypes.string,
+        classes: PropTypes.string,
+        placeholder: PropTypes.string,
+    };
 
 export default FormInput;
