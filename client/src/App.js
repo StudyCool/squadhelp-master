@@ -6,6 +6,7 @@ import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import Payment from './pages/Payment/Payment';
 import StartContestPage from './pages/StartContestPage/StartContestPage';
 import Dashboard from './pages/Dashboard/Dashboard'
+import Transactions from './pages/Transactions/Transactions'
 import PrivateHoc from './components/PrivateHoc/PrivateHoc';
 import NotFound from './components/NotFound/NotFound';
 import Home from './pages/Home/Home';
@@ -18,6 +19,7 @@ import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import MocksData from "./components/MocksData/MocksData";
 
 
 
@@ -58,6 +60,8 @@ class App extends Component {
                                title: 'LOGO'
                            })}/>
                     <Route exact path='/dashboard' component={PrivateHoc(Dashboard)}/>
+                    <Route exact path='/transactions' component={PrivateHoc(Transactions)}/>
+                    <Route exact path='/datamock' component={MocksData}/>
                     <Route exact path='/contest/:id' component={PrivateHoc(ContestPage)}/>
                     <Route exact path='/account' component={PrivateHoc(UserProfile)}/>
                     <Route component={NotFound}/>
